@@ -7,13 +7,7 @@ NumArray(int[] nums) Initializes the object with the integer array nums.
 int sumRange(int left, int right) Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
  
 
-Example 1:
-
-Input
-["NumArray", "sumRange", "sumRange", "sumRange"]
-[[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]
-Output
-[null, 1, -1, -3] """
+"""
 
 
 class NumArray(object):
@@ -37,4 +31,5 @@ class NumArray(object):
 obj = NumArray(nums=[-2, 0, 3, -5, 2, -1])
 
 param_1 = obj.sumRange(left=0,right=2)
+
 print(param_1)
