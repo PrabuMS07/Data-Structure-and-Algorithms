@@ -12,24 +12,22 @@ int sumRange(int left, int right) Returns the sum of the elements of nums betwee
 
 class NumArray(object):
 
-    def __init__(self, nums):
-        self.n = nums
-        
+    def __init__ (self,nums):
+        self.prefix =[0]
+        val = 0
+        for i in range(len(nums)):
+            val += nums[i]
+            self.prefix.append(val)
+    
+    def sumRange(self,left ,right):
 
-    def sumRange(self, left, right):
-        return sum(self.n[left:right+1])
-        s = 0
-        while left<=right:
-            s += self.n[left]
-            left+=1
-        return s
-
-        
+        return self.prefix[right+1] - self.prefix[left]
+            
 
 
 # Your NumArray object will be instantiated and called as such:
 obj = NumArray(nums=[-2, 0, 3, -5, 2, -1])
 
-param_1 = obj.sumRange(left=0,right=2)
+Q1= obj.sumRange(left=0,right=2)
 
-print(param_1)
+print(Q1)
