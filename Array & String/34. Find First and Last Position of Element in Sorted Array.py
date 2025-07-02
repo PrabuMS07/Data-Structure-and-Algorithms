@@ -16,28 +16,28 @@ Output: [3,4]
 class Solution(object):
     def searchRange(self, nums, target):
     
-        l = 0
-        r = len(nums)-1
-        v = -1
-        while (l<=r):
+        low = 0
+        high = len(nums)-1
+        index = -1
+        while (low<=high):
 
-            m = (l+r)//2
-            if nums[m] == target:
-                v = m
+            mid = (low+high)//2
+            if nums[mid] == target:
+                index = mid
                 break
-            elif nums[m]>target:
-                r = m-1
+            elif nums[mid]>target:
+                high = mid-1
             else:
-                l = m+1  
-        l = v
-        r = v 
-        if v != -1:
+                low = mid+1  
+        left = index
+        right = index
+        if index != -1:
 
-            while l-1 >=0 and nums[l-1] == nums[l]:
-                l-=1
-            while r+1 < len(nums) and nums[r+1] == nums[r]:
-                r+=1
-            return [l,r]
+            while left-1 >=0 and nums[left-1] == nums[left]:
+                left-=1
+            while high+1 < len(nums) and nums[high+1] == nums[high]:
+                high+=1
+            return [right,left]
         else:
             return [-1,-1]
 
