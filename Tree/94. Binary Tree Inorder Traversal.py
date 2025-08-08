@@ -27,7 +27,7 @@ Output: [4,2,6,5,7,1,3,9,8]
 #         self.left = left
 #         self.right = right
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def inorderTraversal(self, root):
 
         # stack = []
         # res = []
