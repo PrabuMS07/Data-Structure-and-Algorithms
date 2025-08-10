@@ -29,7 +29,7 @@ Output: [0]
 #         self.next = next
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
-        dummy = ListNode()
+        dummy = ListNode() # type: ignore
         t = dummy
         head1 = list1
         head2 = list2
